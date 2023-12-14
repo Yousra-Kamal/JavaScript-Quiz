@@ -1,11 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/assets/css/style.css" />
     <title>Coding Quiz</title>
-</head>
-<body>
-    
-</body>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="container-fluid text-primary mt-2">
+      <div class="row">
+        <div class="col-6">
+          <a href="#" id="highscore-nav">View Highscores</a>
+          <a href="index.html" id="reset">Try Quiz Again</a>
+        </div>
+        <div class="col-6 d-flex justify-content-end">
+          <a href="#" class=" "> Time:&nbsp;</a>
+          <div class="text-danger fw-bold fs-5" id="timer">60 sec</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- main -->
+    <main>
+      <section class="container-fluid mt-5" id="homePage">
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-sm-12 col-md-6">
+            <h1 class="text-center fw-bold font-monospace">Coding Quiz</h1>
+            <br />
+            <h2 class="h2">
+              Try to answer the following code-related questions within the time
+              limit. Keep in mind that incorrect answers will penalize your
+              score / time by 10 seconds!
+            </h2>
+            <br />
+            <div class="d-flex justify-content-center">
+              <span
+                class="btn btn-warning text-danger-emphasis fs-5 fw-semibold"
+                id="startBtn"
+              >
+                Start Quiz
+              </span>
+            </div>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+      </section>
+
+      <!-- Quiz Section -->
+      <section class="container mt-5" id="startQuiz">
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-sm-12 col-md-6 d-flex flex-column">
+            <h2 class="fs-4" id="questions">Questions</h2>
+            <br />
+            <button
+              class="btn btn-warning text-danger-emphasis mb-3"
+              id="1"
+            ></button>
+            <button
+              class="btn btn-warning text-danger-emphasis mb-3"
+              id="2"
+            ></button>
+            <button
+              class="btn btn-warning text-danger-emphasis mb-3"
+              id="3"
+            ></button>
+            <button
+              class="btn btn-warning text-danger-emphasis"
+              id="4"
+            ></button>
+            <div>
+              <hr class="border border-dark mt-5" />
+            </div>
+            <div id="returnAnswer"></div>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+      </section>
+      <!--   Quiz Completed Section -->
+
+      <section class="container mt-5" id="endQuiz">
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-sm-12 col-md-7 d-flex flex-column">
+            <h3 class="mb-0" id="done">All done!</h3>
+            <br />
+            <p id="finalScore"></p>
+            <form>
+              <div class="form-group row px-3 mb-0">
+                <label class="col-3 col-form-label px-0">Enter initials:</label>
+                <div class="col-7 pr-3 pl-0">
+                  <input
+                    type="text"
+                    maxlength="2"
+                    class="form-control"
+                    id="initials"
+                  />
+                </div>
+                <button
+                  class="col-2 btn btn-warning text-danger-emphasis fs-5 fw-semibold px-1"
+                  id="submit"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+            <div>
+              <hr class="border border-dark mt-5" />
+            </div>
+            <div id="finalAnswer"></div>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+      </section>
+    </main>
+    <script src="/assets/js/script.js"></script>
+  </body>
 </html>

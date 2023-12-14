@@ -1,0 +1,25 @@
+/* Styles for the body element */
+body {
+  font-family: sans-serif;
+  background: radial-gradient(#ffffff70, #b6a27d);
+}
+/* Styles for the header*/
+header {
+  background-color: #bbac95;
+  padding: 20px;
+}
+
+h1 {
+  color: #3c2f13;
+}
+.h2 {
+  font-size: 25px;
+  word-spacing: 8px;
+  line-height: 1.5;
+}
+a {
+  text-decoration: none;
+  color: rgb(76, 59, 34);
+  font-weight: bold;
+  font-size: 20px;
+}
