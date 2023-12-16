@@ -28,12 +28,15 @@ When you click the start quiz button, multiple-choice questions are presented an
 
 ## Links
 
-- [The URL of the deployed website :arrow_right:](https://)
+- [The URL of the deployed website :arrow_right:](https://java-script-quiz-yousra.vercel.app/)
 
 ## Screenshots
 
 The following is a screenshot of the deployed website.
-![alt text]()
+![alt text](/assets/images/screenshot1.jpg)
+![alt text](/assets/images/screenshot2.jpg)
+![alt text](/assets/images/screenshot3.jpg)
+
 
 ## Installation
 
