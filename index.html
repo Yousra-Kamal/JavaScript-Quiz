@@ -10,19 +10,18 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/assets/css/style.css" />
-    <title>Coding Quiz</title>
+    <title>JavaScript Quiz</title>
   </head>
 
   <body>
-    <!-- Header -->
+    <!-- Header,, include high score button and a timer -->
     <header class="container-fluid text-primary mt-2">
       <div class="row">
         <div class="col-6">
-          <a href="#" id="highscore-nav">View Highscores</a>
-          <a href="index.html" id="reset">Try Quiz Again</a>
+          <a href="#" id="viewHighScores">View Highscores</a>
         </div>
         <div class="col-6 d-flex justify-content-end">
-          <a href="#" class=" "> Time:&nbsp;</a>
+          <a href="#"> Time:&nbsp;</a>
           <div class="text-danger fw-bold fs-5" id="timer">60 sec</div>
         </div>
       </div>
@@ -30,52 +29,58 @@
 
     <!-- main -->
     <main>
+      <!-- Home page introductory section with a start quiz button-->
       <section class="container-fluid mt-5" id="homePage">
         <div class="row">
           <div class="col-md-3"></div>
           <div class="col-sm-12 col-md-6">
-            <h1 class="text-center fw-bold font-monospace">Coding Quiz</h1>
-            <br />
-            <h2 class="h2">
-              Try to answer the following code-related questions within the time
-              limit. Keep in mind that incorrect answers will penalize your
-              score / time by 10 seconds!
+            <h1 class="text-center fw-bold font-monospace pb-4">
+              JavaScript Quiz
+            </h1>
+
+            <h2 class="h2 pb-2">
+              Try to answer the following JavaScript-related questions within
+              <span class="fw-bold bg-warning text-danger-emphasis"
+                >60 seconds.</span
+              >
+              Note that incorrect answers will result in a deduction of 10
+              seconds from your overall score/time!
             </h2>
-            <br />
+
             <div class="d-flex justify-content-center">
-              <span
-                class="btn btn-warning text-danger-emphasis fs-5 fw-semibold"
+              <button
+                class="btn btn-warning text-danger-emphasis border border-black fs-5 fw-semibold"
                 id="startBtn"
               >
                 Start Quiz
-              </span>
+              </button>
             </div>
           </div>
           <div class="col-md-3"></div>
         </div>
       </section>
 
-      <!-- Quiz Section -->
+      <!-- Quiz Questions and answers Section -->
       <section class="container mt-5" id="startQuiz">
         <div class="row">
           <div class="col-md-3"></div>
           <div class="col-sm-12 col-md-6 d-flex flex-column">
-            <h2 class="fs-4" id="questions">Questions</h2>
-            <br />
+            <h2 class="fs-4 font-monospace pb-4" id="questions">Questions</h2>
+
             <button
-              class="btn btn-warning text-danger-emphasis mb-3"
+              class="btn btn-warning text-danger-emphasis border border-black fs-5 fw-bold mb-3"
               id="1"
             ></button>
             <button
-              class="btn btn-warning text-danger-emphasis mb-3"
+              class="btn btn-warning text-danger-emphasis border border-black fs-5 fw-bold mb-3"
               id="2"
             ></button>
             <button
-              class="btn btn-warning text-danger-emphasis mb-3"
+              class="btn btn-warning text-danger-emphasis border border-black fs-5 fw-bold mb-3"
               id="3"
             ></button>
             <button
-              class="btn btn-warning text-danger-emphasis"
+              class="btn btn-warning text-danger-emphasis border border-black fs-5 fw-bold"
               id="4"
             ></button>
             <div>
@@ -86,8 +91,8 @@
           <div class="col-md-3"></div>
         </div>
       </section>
-      <!--   Quiz Completed Section -->
 
+      <!-- End of quiz Section,, enter user initials and submit scores -->
       <section class="container mt-5" id="endQuiz">
         <div class="row">
           <div class="col-md-3"></div>
@@ -97,7 +102,9 @@
             <p id="finalScore"></p>
             <form>
               <div class="form-group row px-3 mb-0">
-                <label class="col-3 col-form-label px-0">Enter initials:</label>
+                <label class="col-3 col-form-label fw-semibold px-0"
+                  >Enter initials:</label
+                >
                 <div class="col-7 pr-3 pl-0">
                   <input
                     type="text"
@@ -107,7 +114,7 @@
                   />
                 </div>
                 <button
-                  class="col-2 btn btn-warning text-danger-emphasis fs-5 fw-semibold px-1"
+                  class="col-2 btn btn-warning text-danger-emphasis border border-black fs-5 fw-semibold px-1"
                   id="submit"
                 >
                   Submit
@@ -120,6 +127,33 @@
             <div id="finalAnswer"></div>
           </div>
           <div class="col-md-2"></div>
+        </div>
+      </section>
+
+      <!--  Showing High scores list Section ,, including a go back and reset score buttons -->
+      <section class="container-fluid mt-5" id="highScores">
+        <div class="row scores">
+          <div class="col-md-3 col-lg-4"></div>
+          <div class="col-md-6 col-lg-4">
+            <h2 class="fw-semibold">Highscores!</h2>
+            <br />
+            <ol id="scoreList" class="pr-3"></ol>
+            <br />
+            <div>
+              <a
+                class="btn btn-warning text-danger-emphasis border border-black fs-5 fw-semibold"
+                href="index.html"
+                >Go Back</a
+              >
+              <a
+                href="#"
+                id="resetScores"
+                class="btn btn-warning text-danger-emphasis border border-black fs-5 fw-semibold"
+                >Reset Score</a
+              >
+            </div>
+          </div>
+          <div class="col-md-3 col-lg-4"></div>
         </div>
       </section>
     </main>

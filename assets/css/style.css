@@ -1,9 +1,10 @@
 /* Styles for the body element */
 body {
-  font-family: sans-serif;
+  font-family: serif;
   background: radial-gradient(#ffffff70, #b6a27d);
 }
-/* Styles for the header*/
+
+/* Styles for the header element*/
 header {
   background-color: #bbac95;
   padding: 20px;
@@ -12,14 +13,40 @@ header {
 h1 {
   color: #3c2f13;
 }
+
 .h2 {
   font-size: 25px;
   word-spacing: 8px;
   line-height: 1.5;
 }
+
 a {
   text-decoration: none;
   color: rgb(76, 59, 34);
   font-weight: bold;
   font-size: 20px;
+}
+
+/* Styles for scores list elements */
+li {
+  padding-left: 25px;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #f6bd10;
+  border-top: 1.5px solid wheat;
+  border-bottom: 1.5px solid #3c2f13;
+  border-radius: 20px;
+}
+
+/* Hide page sections */
+#startQuiz {
+  display: none;
+}
+
+#endQuiz {
+  display: none;
+}
+
+#highScores {
+  display: none;
 }
