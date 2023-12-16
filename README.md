@@ -32,7 +32,7 @@ When you click the start quiz button, multiple-choice questions are presented an
 
 ## Screenshots
 
-The following is a screenshot of the deployed website.
+The followings are screenshots of the deployed website.
 ![alt text](/assets/images/screenshot1.jpg)
 ![alt text](/assets/images/screenshot2.jpg)
 ![alt text](/assets/images/screenshot3.jpg)
